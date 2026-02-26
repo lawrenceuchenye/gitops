@@ -19,7 +19,7 @@ jobs:
      runs-on: ubuntu-latest
 
      steps:
-         -name: Print out input
+       - name: Print out input
          run: |
            echo "Role of action issuer:${{github.event.inputs.role}}"
              
