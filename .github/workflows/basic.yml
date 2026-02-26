@@ -1,0 +1,28 @@
+name: Test Worflow
+
+on:
+   workflow_dispatch:
+      inputs:
+         role:
+             description: "Role in the company"
+             required: true
+             type: string
+
+         action:
+             description: "What did you do?"
+             required: true
+             type: string
+
+
+jobs:
+   demo:
+     runs-on: ubuntu-latest
+
+     steps:
+         name: Print out input
+         run: |
+           echo "Role of action issuer:${{github.events.inputs.role}}"
+             
+         
+
+   
