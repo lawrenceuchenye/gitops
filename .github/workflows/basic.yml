@@ -30,7 +30,7 @@ jobs:
          - name: Print out action
            run: |
              echo "Action: ${{ github.event.inputs.action}}"
-         - continue-on-error: 
+         
              
          
 
