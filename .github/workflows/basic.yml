@@ -22,6 +22,15 @@ jobs:
        - name: Print out input
          run: |
            echo "Role of action issuer:${{github.event.inputs.role}}"
+
+   job_2:
+       runs-on: ubuntu-latest
+       needs: demo
+       steps:
+         - name: Print out action
+           run: |
+             echo "Action: ${{ github.event.inputs.action}}"
+         - continue-on-error: 
              
          
 
